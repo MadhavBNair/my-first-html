@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+  color: red;
+  background-color: yellow;  
+  text-align: center;
+  border: 2px solid blue;
+  padding: 30px;
+  margin-bottom: 40px;
+}
+body{
+    background: greenyellow;
+    text-align: left;
+    color: blue;
+}
+#para1{
+    text-align: center;
+    color: red;
+}
+.class{
+    height: 250;
+}
