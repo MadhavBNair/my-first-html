@@ -22,4 +22,11 @@ body{
 }
 .class{
     height: 250;
+    width: 80px;
+    background-color: cyan;
+    text-align: center;
+    border-radius: 8px;
+    color: white;
+    margin-bottom: 10px;
+}
 }
