@@ -1,0 +1,31 @@
+.transition-button{
+    background-color: rgb(5, 73, 95);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    /*Transition properties */
+    transition-property: background-color,
+    transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+.transition-button:hover{
+    background-color: green;
+    transform: scale(1.2);
+}
+#img1{
+    margin-top: 20px;
+    width: 500px;
+    border: 2px solid #ddd;
+    box-shadow: 8px 8px 5px rgba(0, 0, 0, 2);
+    transition: opacity 0.5s ease;
+    opacity: 0;
+}
+#img1:hover{
+    opacity: 1;
+    cursor: pointer;
+}
