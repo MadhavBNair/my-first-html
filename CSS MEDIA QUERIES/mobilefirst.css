@@ -11,3 +11,13 @@ body{
         background-color: darkorange;
     }
 }
+@media (min-width:720px) {
+    body{
+        background-color: darkturquoise;
+    }
+}
+@media (min-width:1080px) {
+    body{
+        background-color: darkorchid;
+    }
+}
