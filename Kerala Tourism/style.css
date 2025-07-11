@@ -168,3 +168,12 @@ form input{
     width: 100%;
 }
 
+.submit{
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: royalblue;
+    border: none;
+    color: white;
+}
+
+
