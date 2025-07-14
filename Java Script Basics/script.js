@@ -126,3 +126,11 @@ for(let i=0;i<5;i++){
 function greet(){
     console.log("Hello user")
 }
+//call function
+greet()
+
+function welcome(name){
+    console.log("Hello" + name)
+}
+
+welcome(" Madhav")
