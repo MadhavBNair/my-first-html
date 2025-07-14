@@ -134,3 +134,28 @@ function welcome(name){
 }
 
 welcome(" Madhav")
+
+function add(num1,num2){
+    return num1+num2
+}
+
+let sum=add(5,7)
+console.log(sum)
+
+//DOM
+//Access the element
+//Store into the variable
+let head1 = document.getElementById("head")
+//Use the property and modify
+head1.innerText="You have been hacked!!"
+
+//modify style
+head1.style.backgroundColor='rgb(89,161,201)'
+head1.style.border='3px solid green'
+//head1.setAttribute("hidden",true)
+
+//Event listners
+
+const handleClick = ()=>{
+    
+}
