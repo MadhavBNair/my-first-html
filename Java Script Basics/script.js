@@ -6,7 +6,7 @@ alert("hi")
 
 document.write("Hello ,good evening!")
 
-var fname="Jayce" //decalring and assigning
+var fname="Madhav" //decalring and assigning
 console.log(fname)
 
 let age =22
