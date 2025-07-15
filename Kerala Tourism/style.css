@@ -1,52 +1,49 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 body{
-    font-family: "poppins";
+    font-family: 'Poppins';
 }
 
-main{
+main {
     background-image: url('./images/hero-bg.png');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
-}
+    height: 100vh; 
+ }
 
 .navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    flex-wrap: wrap;
-    padding: 20px 15px;
-}
-
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;
+        position: relative; 
+        flex-wrap: wrap; 
+        padding: 20px 15px;
+    }
+   
 .navbar-links{
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    gap: 20px;
+    display:flex;
+    gap:20px;
     justify-content: space-around;
     align-items: center;
 }
-
 .nav-link a{
     color: white;
-    text-decoration: none;
+     text-decoration: none;
     font-size: 16px;
-    display: block;
+    display: block; 
 }
-
 .nav-link{
     list-style-type: none;
 }
-
-.navbar-toggler{
-    background: none;
+.navbar-toggler {
+     background: none;
     border: none;
     color: white;
     font-size: 30px;
@@ -55,14 +52,15 @@ main{
 }
 
 .nav-btn{
-    border: 2px solid #0AAF4F;
+    border: 2px solid  #0AAF4F;
     background-color: rgba(0, 0, 0, 0);
-    padding: 10px;
+    padding:10px;
     transition: background-color 1s ease;
 }
 
 .nav-btn:hover{
-    background-color: #0AAF4F;
+    background-color:#0AAF4F;
+        
 }
 
 #hero-text h1{
@@ -72,11 +70,13 @@ main{
     margin-bottom: 1.5rem;
 }
 
-#hero-text{
+#hero-text {
+    
     text-align: center;
 }
 
-.btn{
+
+.btn {
     color: white;
     font-size: 1rem;
     text-transform: uppercase;
@@ -89,32 +89,29 @@ main{
     transition: 0.5s ease background-color;
 }
 
-.btn:hover{
+.btn:hover {
     background-color: #0AAF4F;
 }
 
-.contact-btn{
+.contact-btn  {
     background-color: #0AAF4F;
 }
 
-.contact-btn:hover{
+.contact-btn:hover {
     background: none;
 }
 
 .container{
-    max-width: 1000px;
-    margin: 0 auto;
+    max-width:1000px;
+    margin:0 auto;
 }
-
-/*Basic styling for the destination section */
-.destinations{
+.destinations {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(20rem,1fr));
     gap: 16px;
     padding: 16px;
 }
-
-.destinations article{
+.destinations article {
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -123,20 +120,18 @@ main{
     transition: transform 0.5s ease;
 }
 
-.destinations article img{
+.destinations article img {
     width: 100%;
     height: 300px;
     object-fit: cover;
     display: block;
     overflow: hidden;
 }
-
 .destinations article:hover{
     cursor: pointer;
-    transform: scale(1.05);
+    transform:scale(1.05);
 }
-
-.destinations article p{
+.destinations article p {
     margin: 0;
     padding: 8px;
     font-size: 16px;
@@ -147,33 +142,62 @@ main{
 .districts{
     margin-bottom: 20px;
 }
-
-footer{
+footer {
     text-align: center;
     margin: 10px 0;
 }
-
-form{
-    display: flex;
+form {
+    display:flex;
     align-items: center;
-    flex-direction: column;
+    flex-direction: column;     
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    margin: 10px auto;
+    margin: 10px auto;  
     width: max-content;
-    padding: 50px;
+    padding: 50px ;
 }
-
-form input{
-    padding: 10px 50px 10px 10px;
+form input {
+    padding :10px 50px 10px 10px; 
     width: 100%;
 }
-
 .submit{
-    padding: 10px 20px;
+    padding:10px 20px;
     border-radius: 8px;
     background-color: royalblue;
     border: none;
-    color: white;
+    color:white;
+}
+@media (max-width:780px) {
+    .districts {
+        text-align: center;
+    }
+
+    #hero-text h1 {
+        font-size: 8vw ;
+    }
+    #hero-text a {
+        font-size: 2vw ;
+    }
 }
 
+@media (max-width:600px) {
+    .navbar-links {
+        display: none;
+    }
 
+    .navbar-toggler {
+        display: block;
+    }
+
+    form input {
+    padding :5px 25px 5px 5px; 
+}
+
+    form {
+        padding: 20px;
+    }
+}
+@media (max-width:400px) {
+    #hero-text {
+
+    }
+}
