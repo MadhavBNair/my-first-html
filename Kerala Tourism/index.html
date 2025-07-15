@@ -88,10 +88,15 @@
     
 </div>
 <div class="container form-container">
-    <form action="">
+    <form id="enquiryForm" action="#">
         <h1>Enquiry for Booking </h1>
-        <input type="text" placeholder="Name" name="" name="name" id="name" maxlength="20" pattern="[a-zA-Z\s]{1,20}" required><br><br>
-        <input type="email" placeholder="Email" name="email" id="email" required><br><br>
+        <input type="text" placeholder="Name" name="name" id="name" maxlength="20" pattern="[a-zA-Z\s]{1,20}" required>
+         <small class="error" id="nameError" style="color:red"></small>
+        <br><br>
+
+        <input type="email" placeholder="Email" name="email" id="email" required>
+         <small class="error" id="emailError" style="color:red"></small>
+        <br><br>
         <input type="tel" placeholder="Number" name="phone" id="phone" pattern="\d{10}" required><br><br>
         <select name="districts" class="districts" >
             <option value="">Alappuzha</option>
@@ -109,11 +114,12 @@
             <option value="">Thrissur</option>
             <option value="">Wayanad</option>
         </select>
-        <button type="submit" class="submit">Submit</button>
+        <button type="submit">Submit</button>
     </form>
 </div>
 <footer>
     Copyright @ 2024
 </footer>
+<script src="script.js"></script>
 </body>
 </html>
