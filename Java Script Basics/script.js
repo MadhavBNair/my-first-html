@@ -156,6 +156,9 @@ head1.style.border='3px solid green'
 
 //Event listners
 
-const handleClick = ()=>{
-    
+function handleClick(){
+    document.getElementById('clickbutton').innerText="Clicked!"
+    document.getElementById('clickbutton').style.backgroundColor='yellow'
 }
+document.getElementById('clickbutton').addEventListener("click",handleClick)
+document.getElementById('clickbutton').addEventListener("click",()=>console.log("Second handler"))
