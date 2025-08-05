@@ -1,84 +1,84 @@
 #include<stdio.h>
-int main()
+#include<stdlib.h>
+int front=-1,rear=-1,choice,size,item,q[10],i;
+void Enqueue();
+void Dequeue();
+void Display();
+void main()
 {
-int row,col,i,j,k,a[10][10],spmatrix[10][3],transposematrix[10][10];
-printf("Enter the row size : ");
-scanf("%d",&row);
-printf("Enter the column size : ");
-scanf("%d",&col);
-printf("Enter the elements of the sparse matrix: ");
-for(i=0;i<row;i++)
-{
-	for(j=0;j<col;j++)
-	{
-		scanf("%d",&a[i][j]);
-	}
+	printf("Enter the size of the Queue : ");
+	scanf("%d",&size);
+	do{
+		printf("1.Enqueue \n 2.Dequeue \n 3.Display \n");
+		printf("Enter your choice : ");
+		scanf("%d",&choice);
+		switch(choice) {
+			case 1:
+            			Enqueue();
+            			break;
+        			case 2:
+            			Dequeue();
+            			break;
+        			case 3:
+            			Display();
+            			break;
+        			default:
+            			printf("Invalid choice\n");
+       				 }	
+        }while(choice!=4);
+        
 }
-printf("\n");
-printf("Display Sparse Matrix \n");
-for(i=0;i<row;i++)
-{
-	for(j=0;j<col;j++)
+void Enqueue(){
+	if(rear==size-1)
 	{
-		printf("%d \t",a[i][j]);
+		printf("Queue is full\n");
+	}
+	else if(front==-1 && rear==-1)
+	{
+		printf("enter the elements : ");
+		scanf("%d",&item);
+		front=rear=0;
+		q[rear]=item;
+	}
+	else
+	{
+		rear=rear+1;
+		printf("enter the elements : ");
+		scanf("%d",&item);
+		q[rear]=item;
 	}
 	printf("\n");
+	
 }
-printf("\n");
-//Recording of non-zero elements
-k=1;
-for(i=0;i<row;i++)
-{
-	for(j=0;j<col;j++)
+void Dequeue(){
+	if(front==-1 && rear==-1)
 	{
-		if(a[i][j]!=0)
+		printf("Queue is empty");
+	}
+	else if(front==rear)
+	{
+		printf("%d",q[front]);
+		front=-1;
+		rear=-1;
+	}
+	else
+	{
+		printf("%d",q[front]);
+		front=front+1;
+	}
+	printf("\n\n");
+}
+void Display(){
+	if(front==-1 && rear==-1)
+	{
+		printf("queue is empty");
+	}
+	else
+	{
+		for(i=front;i<=rear;i++)
 		{
-			spmatrix[k][0]=i;
-			spmatrix[k][1]=j;
-			spmatrix[k][2]=a[i][j];
-			k++;
+			printf("%d \t",q[i]);
 		}
 	}
-}
-spmatrix[0][0]=row;
-spmatrix[0][1]=col;
-spmatrix[0][2]=k-1;
-printf("Tupple format \n");
-for(i=0;i<=spmatrix[0][2];i++)
-{
-	for(j=0;j<3;j++)
-	{
-		printf("%d \t",spmatrix[i][j]);
-	}
-	printf("\n");
-}
-printf("\n");
-//initialize
-transposematrix[0][0]=spmatrix[0][1];
-transposematrix[0][1]=spmatrix[0][0];
-transposematrix[0][2]=spmatrix[0][2];
-//traverse and record
-k=1;
-for(i=0;i<=spmatrix[0][1];i++)
-{
-	for(j=1;j<=spmatrix[0][2];j++)
-	{
-		if(spmatrix[j][1]==i)
-		{
-			transposematrix[k][0]=spmatrix[j][1];
-			transposematrix[k][1]=spmatrix[j][0];
-			transposematrix[k][2]=spmatrix[j][2];
-			k++;
-		}
-	}
-}
-printf("Display the tranpose of the sparse matrix \n");
-for(i=0;i<=transposematrix[0][2];i++)
-{
-	for(j=0;j<3;j++)
-	{
-		printf("%d \t",transposematrix[i][j]);
-	}
-	printf("\n");
-}
+	printf("\n\n");
 }
